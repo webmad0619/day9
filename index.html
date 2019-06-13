@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        html,
+        body {
+            overflow: hidden;
+        }
+    </style>
+    <style>
+        canvas {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myDrawing"></canvas>
+
+    <script>
+        // stores a canvas DOM element reference into this constant
+        const canvas = document.querySelector("#myDrawing")
+
+        // this function sets the right height and width for the canvas
+        // based on the max height and width of the available space
+        // in the viewport
+        function setCanvasDimensions() {
+            canvas.setAttribute("height", window.innerHeight)
+            canvas.setAttribute("width", window.innerWidth)
+        }
+
+        // we start off by calling this function so the canvas
+        // resizes to the max available space
+        setCanvasDimensions()
+
+        // we set an event listener to the viewport resize
+        // which will call the setCanvasDimensions function
+        // therefore allowing us to implement responsiveness
+        // remember it is not allowed to set the event listener's
+        // callback function with a parenthesis. Set it without them
+        window.onresize = setCanvasDimensions
+    </script>
+</body>
+
+</html>
